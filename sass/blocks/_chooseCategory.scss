@@ -1,0 +1,64 @@
+.chooseCategory {
+    padding: 70px 0;
+    @include forMobile {
+        padding: 50px 0;
+    }
+    &__title {
+        text-align: center;
+        font-family: $heading-font;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 133%;
+        letter-spacing: -2px;
+        color: $colorBlack;
+        margin-bottom: 71px;
+        @include forMobile {
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+    }
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 12px;
+        .card {
+            max-width: 296px;
+            padding: 32px;
+            border: 1px solid rgba(109, 110, 118, 0.3);
+            cursor: pointer;
+            &__img {
+                width: 48px;
+                height: 48px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+                margin-bottom: 15px;
+            }
+            &__title {
+                font-family: $heading-font;
+                font-weight: 700;
+                font-size: 28px;
+                line-height: 143%;
+                letter-spacing: -1px;
+                color: $colorBlack;
+            }
+            &__text {
+                font-family: $main-font;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 175%;
+                color: #6D6E76;
+            }
+            &:hover {
+                background-color: $colorYellow;
+                border: none;
+                .card__img {
+                    background-color: #FBF6EA;
+                }
+            }
+        }
+    }
+}

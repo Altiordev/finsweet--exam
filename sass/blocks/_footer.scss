@@ -1,0 +1,85 @@
+footer {
+    padding: 54px 0;
+    background-color: $colorBlack;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include forMobile {
+        flex-direction: column;
+        gap: 25px;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        * {
+            font-family: $main-font;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+            color: #FFF;
+            opacity: 0.7;
+            @include forMobile {
+                text-align: center;
+            }
+        }
+        &--email-tel {
+            display: flex;
+            align-items: center;
+            column-gap: 5px;
+            @include forMinMobile {
+                flex-direction: column;
+            }
+            a:hover {
+                opacity: 1;
+            }
+        }
+    }
+    &__socials {
+        display: flex;
+        align-items: center;
+        column-gap: 27px;
+        i {
+            font-size: 25px;
+            color: #6d6e76;
+            transition: all .1s ease;
+        }
+        @include forMobile {
+            i.fa-facebook {
+                color: #4267B2
+            }
+            i.fa-twitter {
+                color: #00acee
+            }
+            i.fa-instagram {
+                color: transparent;
+                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                background-clip: text;
+                -webkit-background-clip: text;
+            }
+            i.fa-linkedin {
+                color: #2867B2;
+            }
+        }
+        i.fa-facebook:hover {
+            color: #4267B2
+        }
+        i.fa-twitter:hover {
+            color: #00acee
+        }
+        i.fa-instagram:hover {
+            color: transparent;
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+            background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+        i.fa-linkedin:hover {
+            color: #2867B2;
+        }
+    }
+}

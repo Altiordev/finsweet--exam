@@ -1,0 +1,107 @@
+nav {
+    width: 100%;
+    padding: 25px 0;
+    background-color: $colorBlack;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__menuOpen {
+        display: none;
+        font-size: 25px;
+        @include forTablet {
+            display: block;
+        }
+    }
+    &__mobileMenu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100%;
+        width: 100%;
+        background-color: $colorBlack;
+        display: none;
+        flex-direction: column;
+        transition: all 0.2s linear;
+        gap: 24px;
+        &.active {
+            left: 0;
+        }
+        @include forTablet {
+            display: flex;
+        }
+        &-item {
+            padding: 0 25px;
+            font-family: $main-font;
+        }
+        &-item:first-child {
+            width: 100%;
+            padding: 25px 25px;
+            height: 83px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #FFF;
+            i {
+                font-size: 25px;
+            }
+            svg path {
+                fill: $colorBlack;
+            }
+        }
+        &-item:last-child a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 50px;
+            border-radius: 20px;
+            font-family: $heading-font;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 24px;
+            background-color: #FFF;
+            color: $colorBlack;
+        }
+        &-item a {
+            color: #FFF;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+            font-size: 20px;
+        }
+    }
+    &__menu {
+        display: flex;
+        align-items: center;
+        column-gap: 24px;
+        @include forTablet {
+            display: none;
+        }
+        &-item {
+            font-family: $main-font;
+        }
+        &-item:last-child {
+            margin-left: 59px;
+        }
+        &-item:last-child a {
+            display: block;
+            padding: 16px 48px;
+            font-family: $heading-font;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 24px;
+            background-color: #FFF;
+            color: $colorBlack;
+        }
+        &-item a {
+            color: #FFF;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+        }
+    }
+}

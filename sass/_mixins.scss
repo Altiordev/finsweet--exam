@@ -1,0 +1,23 @@
+@mixin forLargeTablet {
+    @media screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin forTablet {
+    @media screen and (max-width: 770px) {
+        @content;
+    }
+}
+
+@mixin forMobile {
+    @media screen and (max-width: 528px) {
+        @content;
+    }
+}
+
+@mixin forMinMobile {
+    @media screen and (max-width: 355px) {
+        @content;
+    }
+}

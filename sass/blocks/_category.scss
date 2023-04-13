@@ -1,0 +1,205 @@
+.category {
+    &__header {
+        padding: 80px 0;
+        background-color: #F4F0F8;
+    }
+    &__title {
+        font-family: $heading-font;
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 114%;
+        text-align: center;
+        letter-spacing: -2px;
+        color: $colorBlack;
+        margin-bottom: 16px;
+    }
+    &__description {
+        max-width: 515px;
+        margin: 0 auto;
+        font-family: $main-font;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 175%;
+        text-align: center;
+        color: #6D6E76;
+        margin-bottom: 32px;
+    }
+}
+
+.currentPageCategory {
+    display: block;
+    font-family: $main-font;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: $colorBlack;
+    a {
+        color: $colorBlack;
+        text-decoration: underline;
+    }
+}
+
+.category__resaults-wrapper {
+    padding: 57px 0;
+}
+
+.category {
+    &__form {}
+    &__search {
+        width: 100%;
+        padding: 24px;
+        font-family: $main-font;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: $colorBlack;
+        border: 1px solid rgba(109, 110, 118, 0.5);
+        border-radius: 2px;
+        margin-bottom: 57px;
+        @include forMinMobile {
+            padding: 12px;
+            font-size: 14px;
+        }
+        &::placeholder {
+            opacity: 0.5;
+            color: $colorBlack;
+        }
+    }
+    &__resaults {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        margin-bottom: 80px;
+        .card {
+            max-width: 100%;
+            max-height: 318px;
+            display: flex;
+            align-items: flex-start;
+            column-gap: 36px;
+            @include forLargeTablet {
+                max-height: 100%;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            @include forMobile {
+                border: 1px solid rgba(109, 110, 118, 0.3);
+            }
+            &__img-wrapper {
+                max-width: 547px;
+                height: 318px;
+            }
+            img {
+                width: 547px;
+                height: 318px;
+                object-fit: contain;
+                object-position: center;
+                box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
+                @include forLargeTablet {
+                    width: 100%;
+                    height: 300px;
+                    margin-bottom: 40px;
+                }
+                @include forMobile {
+                    margin-bottom: 10px;
+                    height: 250px;
+                }
+            }
+            &__text {
+                max-width: 100%;
+                height: 100%;
+                // white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                @include forMobile {
+                    gap: 10px;
+                    padding: 5px;
+                }
+            }
+            &__theme {
+                font-family: $main-font;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 125%;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                color: $colorPurple;
+                @include forMobile {
+                    font-size: 14px;
+                }
+            }
+            &__title {
+                font-family: $heading-font;
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 133%;
+                letter-spacing: -2px;
+                color: $colorBlack;
+                @include forMobile {
+                    font-size: 24px;
+                }
+            }
+            &__info {
+                font-family: $main-font;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 175%;
+                color: #6D6E76;
+                @include forMobile {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+.category__pagination {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    button {
+        font-family: $heading-font;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 143%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: -1px;
+        border: none;
+        background-color: transparent;
+        color: $colorBlack;
+        cursor: pointer;
+        &.active {
+            color: $colorYellow;
+        }
+        @include forMobile {
+            font-size: 16px;
+        }
+    }
+    span {
+        font-family: $heading-font;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 143%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: -1px;
+        border: none;
+        background-color: transparent;
+        color: $colorBlack;
+        cursor: pointer;
+        @include forMobile {
+            font-size: 16px;
+        }
+    }
+}

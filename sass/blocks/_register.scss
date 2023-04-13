@@ -1,0 +1,88 @@
+.register_wrapper {
+    margin: 68px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include forMinMobile {
+        margin: 40px 0;
+    }
+    h1 {
+        font-family: $heading-font;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 64px;
+        letter-spacing: -2px;
+        margin-bottom: 76px;
+        @include forMinMobile {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.form {
+    max-width: 768px;
+    input {
+        width: 100%;
+        padding: 24px;
+        font-family: $main-font;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        color: $colorBlack;
+        border: 1px solid rgba(109, 110, 118, 0.5);
+        border-radius: 2px;
+        margin-bottom: 19px;
+        @include forMinMobile {
+            padding: 12px;
+            font-size: 14px;
+        }
+        &::placeholder {
+            color: $colorBlack;
+        }
+    }
+    .btn {
+        width: 100%;
+        padding: 16px 0;
+        margin-top: 54px;
+        background-color: $colorYellow;
+        border: none;
+        cursor: pointer;
+        font-family: $heading-font;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        color: $colorBlack;
+        @include forMinMobile {
+            padding: 14px 0;
+            margin-top: 40px;
+            font-size: 20px;
+        }
+    }
+}
+
+.to_login {
+    margin-top: 19px;
+    font-family: $main-font;
+    @include forMinMobile {
+        font-size: 12px;
+        text-align: center;
+    }
+    a {
+        font-family: $heading-font;
+        color: $colorBlack;
+        font-weight: 900;
+    }
+}
+
+.validation {
+    position: relative;
+    bottom: -40px;
+    text-align: center;
+    font-family: $main-font;
+    font-size: 14px;
+    color: red;
+    @include forMinMobile {
+        bottom: -30px;
+    }
+}

@@ -1,0 +1,91 @@
+.hero {
+    padding-top: 128px;
+    padding-bottom: 192px;
+    background: radial-gradient(30.56% 76.04% at 74.58% 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%), url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include forTablet {
+        padding-top: 70px;
+        padding-bottom: 100px;
+        background-position: center;
+    }
+    &__textWrapper {
+        max-width: 803px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        font-family: $main-font;
+        @include forTablet {
+            text-align: center;
+        }
+    }
+    &__posted {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 125%;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        span {
+            font-weight: 900;
+        }
+    }
+    &__title {
+        font-family: $heading-font;
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 114%;
+        letter-spacing: -2px;
+        color: #FFFFFF;
+        @include forTablet {
+            text-align: center;
+            font-size: 36px;
+        }
+    }
+    &__by {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 175%;
+        color: #FFFFFF;
+        span {
+            color: $colorYellow;
+        }
+        @include forTablet {
+            font-size: 14px;
+        }
+    }
+    &__info {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 175%;
+        color: #FFFFFF;
+        @include forTablet {
+            font-size: 12px;
+            margin-bottom: 40px;
+        }
+    }
+    &__btn {
+        padding: 16px 48px;
+        font-family: $heading-font;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 133%;
+        display: flex;
+        align-items: center;
+        border: none;
+        color: $colorBlack;
+        background-color: $colorYellow;
+        cursor: pointer;
+        @include forTablet {
+            padding: 12px 24px;
+            font-size: 14px;
+        }
+    }
+}
+
+.btn__wrapper {
+    margin-top: 48px;
+    @include forTablet {
+        margin: 0 auto;
+    }
+}
