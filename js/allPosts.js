@@ -1,4 +1,4 @@
-const apiKey = "FdL0w31g0_yL-djIqCKL5H-d-ev6_jghYhE6uV_Sazs";
+const apiKey = "49krSK-rLHZBDM8MZNiZEsLqgsm8U3hEBZquwHeDA18";
 const input = document.querySelector('.allPosts__search');
 const form = document.querySelector('.allPosts__form');
 const pagenation = document.querySelector('.allPosts__pagination');

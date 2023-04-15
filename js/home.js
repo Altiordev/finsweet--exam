@@ -4,7 +4,7 @@ let url = 'https://api.newscatcherapi.com/v2/search?q=News'
 fetch(url, {
     method: 'GET',
     headers: {
-        'x-api-key': 'FdL0w31g0_yL-djIqCKL5H-d-ev6_jghYhE6uV_Sazs'
+        'x-api-key': '49krSK-rLHZBDM8MZNiZEsLqgsm8U3hEBZquwHeDA18'
     }
 }).then((response) => response.json()).then((data) => {
 
